@@ -1,0 +1,114 @@
+.Header {
+  width: 500px;
+  height: 200px;
+  background-color: #1f2022;
+
+  .Info {
+    height: 198px;
+    width: 500px;
+
+    .LogoPart {
+      @apply flex items-center;
+      gap: 12px;
+      padding: 16px 16px;
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+    }
+    .SearchPart {
+      @apply flex items-center justify-between;
+      padding: 8px 10px;
+      width: 100%;
+
+      .Menu {
+        @apply flex items-center justify-center;
+        width: 40px;
+        height: 40px;
+        transition: 0.3s all;
+        border-radius: 50%;
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      .Menu:hover {
+        background: #2d2d2d;
+      }
+      .Menu:active {
+        transform: translateY(20px);
+      }
+
+      .Search {
+        border: none;
+        outline: none;
+        width: 75%;
+        min-width: 224px;
+        height: 42px;
+        padding: 0px 40px 0px 11px;
+        background: url(https://i.postimg.cc/dVzmDF19/icons8-search-96-2.png)
+          no-repeat center;
+        cursor: pointer;
+        background-size: 25px;
+        background-position-x: calc(100% - 12px);
+        background-color: #2d2d2d;
+        border-radius: 6px;
+        transition: 0.3s all;
+      }
+      .Search:active {
+        background-position-y: 25px;
+      }
+      .List {
+        @apply flex items-center justify-center;
+        width: 40px;
+        height: 40px;
+        transition: 0.3s all;
+        border-radius: 50%;
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      .List:hover {
+        background: #2d2d2d;
+      }
+      .List:active {
+        transform: translateY(20px);
+      }
+    }
+    .ChatsPart {
+      .AllChats {
+        @apply flex justify-center;
+        height: 60px;
+        padding: 10px 40px;
+
+        button {
+          margin: 10px 20px;
+          transition: 0.3s all;
+        }
+        button:hover {
+          color: #62a1dd;
+        }
+      }
+      .PointerSection {
+        width: 100%;
+        padding: 0px 40px;
+        .Pointer {
+          margin-left: 22%;
+          width: 16px;
+          height: 3px;
+          background-color: #62a1dd;
+          border-radius: 3px;
+          transition: 0.3s all;
+        }
+      }
+    }
+  }
+  .Space {
+    display: block;
+    width: 550px;
+    height: 2px;
+    background-color: rgba($color: #ffffff, $alpha: 0.1);
+  }
+}

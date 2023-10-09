@@ -1,0 +1,75 @@
+.Chats {
+  width: 500px;
+  height: calc(100vh - 200px);
+  background-color: #1f2022;
+  .Space {
+    height: 5px;
+  }
+  .CurrChat {
+    @apply flex items-center justify-between;
+    height: 75px;
+    margin: 10px;
+    padding: 0px 15px;
+    border-radius: 8px;
+    background-color: none;
+    transition: 0.3s all;
+    cursor: pointer;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    .RightSection {
+      @apply flex items-center;
+      img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+      }
+      .Message {
+        margin: 10px;
+
+        p {
+          color: #a9a9a9;
+        }
+      }
+    }
+    .LeftSection {
+      @apply flex flex-col items-end;
+      p {
+        color: #a9a9a9;
+      }
+      button {
+        @apply flex justify-center items-center;
+        img {
+          width: 25px;
+          height: 25px;
+        }
+        transition: 0.3s all;
+      }
+      button:hover {
+        transform: scale(1.1);
+      }
+      button:active {
+        transform: translateY(10px);
+      }
+    }
+  }
+  .CurrChat:hover {
+    background-color: #282828;
+  }
+  .CurrChat:active {
+    animation: chat-small 0.3s;
+  }
+}
+
+@keyframes chat-small {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1);
+  }
+}

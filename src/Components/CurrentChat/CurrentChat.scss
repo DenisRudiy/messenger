@@ -1,0 +1,132 @@
+.CurrentChat {
+  height: 100%;
+
+  .ChatMessages {
+    @apply flex flex-col gap-3;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    height: calc(100% - 100px);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    .MyMessage {
+      margin-left: 55%;
+      background-color: #62a1dd;
+      width: 45%;
+      border-radius: 8px 8px 0px 8px;
+      color: #c0d9f1;
+    }
+    .YouMessage {
+      background-color: #2f2f2f;
+      width: 45%;
+      border-radius: 8px 8px 8px 0px;
+      color: #acacac;
+    }
+    .CommonMessage {
+      @apply p-2;
+      min-height: 50px;
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      .Message {
+        color: white;
+        width: calc(100% - 90px);
+      }
+
+      .MyTime {
+        @apply flex gap-1 items-center justify-end;
+        .Checkmark {
+          width: 18px;
+          height: 18px;
+        }
+      }
+      .YourTime {
+        @apply flex gap-1 items-center justify-end;
+      }
+    }
+    .PhotoMessage {
+      min-height: 50px;
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      img {
+        border-radius: 8px;
+        cursor: pointer;
+        width: calc(100% - 20px);
+        height: auto;
+        margin: 10px;
+      }
+      .MyTime {
+        @apply flex gap-1 items-center justify-end;
+        .Checkmark {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+    .FileMessage {
+      @apply p-2;
+      min-height: 50px;
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      .FileSection {
+        @apply flex items-center gap-5;
+        .File {
+          width: 60px;
+          height: 60px;
+          cursor: pointer;
+        }
+        .FileDetails {
+          .FileName {
+            color: white;
+          }
+        }
+      }
+      .MyTime {
+        @apply flex gap-1 items-center justify-end;
+        .Checkmark {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+  .ChatMessages::-webkit-scrollbar {
+    width: 0;
+  }
+  .ChatInput {
+    @apply flex justify-center items-center;
+    height: 100px;
+    .ChatInputContainer {
+      @apply flex justify-center items-center gap-2 mr-1 ml-1;
+      background-color: #2f2f2f;
+      width: 80%;
+      height: 50px;
+      border-radius: 8px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      .InputButton {
+        @apply flex justify-center items-center rounded-full;
+        width: 40px;
+        height: 40px;
+        transition: 0.3s all;
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      .InputButton:hover {
+        background-color: #1f1d1d;
+      }
+      .InputButton:active {
+        transform: scale(1.1);
+      }
+      input {
+        width: 80%;
+        outline: none;
+        border: none;
+        background-color: #2f2f2f;
+      }
+    }
+  }
+}
